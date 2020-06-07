@@ -1,0 +1,19 @@
+{
+    "python.pythonPath": "env/bin/python2.7",
+    "sqltools.connections": [
+        {
+            "database": "blaubergselector",
+            "dialect": "MySQL",
+            "name": "blauberg_vagrant",
+            "password": "secret",
+            "port": 33060,
+            "server": "localhost",
+            "username": "homestead"
+        },
+        {
+            "database": "${workspaceFolder}/db.sqlite3",
+            "dialect": "SQLite",
+            "name": "boilerplate"
+        }
+    ]
+}

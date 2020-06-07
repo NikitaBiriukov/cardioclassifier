@@ -1,0 +1,82 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Tasks {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Tasks</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="javascript:">Tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>{{ task.uuid }}</h5>
+                                </div>    
+                                <div class="card-block">
+                                    
+                                    <form action="solver"  method="post" novalidate>
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                                <label for="classifier">Classifier</label>
+                                                <select id="classifier" class="mb-3 form-control">
+                                                        <option>Decision Trees</option>
+                                                </select>
+                                                <small id="classifierHelp" class="form-text text-muted">Select classifier to solve problem.</small>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" title="" data-toggle="tooltip" data-original-title="Run Algorithm">
+                                            Run Algorithm
+                                        </button>
+                                    </form>
+
+                                </div>
+                            </div>    
+
+                            {% for result_ in task.taskresult_set.all %}
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>{{ result_.uuid }}</h5>
+                                    </div> 
+                                    <div class="card-block">
+                                        <h6>Classifier : {{ result_.classifier_id.title }}</h6>
+                                        <a href="/media/{{ result_.uuid }}.pdf">{{  result_.uuid }}</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

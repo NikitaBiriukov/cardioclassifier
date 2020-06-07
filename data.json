@@ -1,0 +1,179 @@
+[
+    {
+        "model": "samples.sampletype",
+        "pk": 1,
+        "fields": {
+            "title": "The Cleveland Dataset"
+        }
+    },
+    {
+        "model": "samples.sample",
+        "pk": 1,
+        "fields": {
+            "sample_type": 1,
+            "title": "The Cleveland Dataset (303 instances)",
+            "pub_date": "2020-06-01T14:48:57Z"
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 1,
+        "fields": {
+            "sample_type": 1,
+            "name": "age",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 2,
+        "fields": {
+            "sample_type": 1,
+            "name": "gender",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 3,
+        "fields": {
+            "sample_type": 1,
+            "name": "cp",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 4,
+        "fields": {
+            "sample_type": 1,
+            "name": "trestbps",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 5,
+        "fields": {
+            "sample_type": 1,
+            "name": "chol",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 6,
+        "fields": {
+            "sample_type": 1,
+            "name": "fbs",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 7,
+        "fields": {
+            "sample_type": 1,
+            "name": "restecg",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "samples.sampleparameter",
+        "pk": 8,
+        "fields": {
+            "sample_type": 1,
+            "name": "thalach",
+            "parameter_type": 0
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 1,
+        "fields": {
+            "title": "Decision Trees",
+            "executable": "dt.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 2,
+        "fields": {
+            "title": "K-Nearest Neighbor",
+            "executable": "knn.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 3,
+        "fields": {
+            "title": "Support Vector Machine",
+            "executable": "svm.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 4,
+        "fields": {
+            "title": "Radial Basis Function",
+            "executable": "rbf.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 5,
+        "fields": {
+            "title": "Artificial Neural Network",
+            "executable": "ann.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "classifiers.classifier",
+        "pk": 6,
+        "fields": {
+            "title": "Naive Bayes",
+            "executable": "nb.py",
+            "settings": "blank"
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": 2,
+        "fields": {
+            "uuid": "task1",
+            "pub_date": "2020-06-01T16:23:10Z"
+        }
+    },
+    {
+        "model": "tasks.taskresult",
+        "pk": 1,
+        "fields": {
+            "task_id": 2,
+            "uuid": "task1_dt_result",
+            "classifier_id": 1
+        }
+    },
+    {
+        "model": "tasks.taskresult",
+        "pk": 2,
+        "fields": {
+            "task_id": 2,
+            "uuid": "task1_knn_result",
+            "classifier_id": 2
+        }
+    },
+    {
+        "model": "tasks.taskresult",
+        "pk": 3,
+        "fields": {
+            "task_id": 2,
+            "uuid": "task1_svm_result",
+            "classifier_id": 3
+        }
+    }
+]
