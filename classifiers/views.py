@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from .models import Classifier
 
 def index(request):
-    latest_classifier_list = Classifier.objects.order_by('-id')[:5]
+    latest_classifier_list = Classifier.objects.order_by('-id')[:15]
     context = {
         'latest_classifier_list': latest_classifier_list,
     }
