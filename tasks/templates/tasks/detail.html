@@ -64,7 +64,9 @@
                                     </div> 
                                     <div class="card-block">
                                         <h6>Classifier : {{ result_.classifier_id.title }}</h6>
-                                        <a href="/media/{{ result_.uuid }}.pdf">{{  result_.uuid }}</a>
+                                        <p><a href="/media/{{ result_.uuid }}.pdf">{{  result_.uuid }}</a></p>
+                                        <p><a href="/media/{{ result_.uuid }}-surface.pdf">Decision surface</a></p>
+
                                     </div>
                                 </div>
                             {% endfor %}
