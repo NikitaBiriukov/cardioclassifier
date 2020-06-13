@@ -31,52 +31,10 @@
             <div class="page-wrapper">
                 <!-- [ Main Content ] start -->
                 <div class="row">
-                    <!-- [ basic-table ] start -->
                     <div class="col-xl-12">
                         <div class="card">
                             <div class="card-header">
-                                <h5>Basic Table</h5>
-                                <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
-                            </div>
-                            <div class="card-block table-border-style">
-                                {% if latest_task_list %}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>UUID</th>
-                                                <th>link</th>
-                                                <th>date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for task_ in latest_task_list %}
-                                            <tr>
-                                                <th scope="row">{{task_.id}}</th>
-                                                <td>{{task_.uuid}}</td>
-                                                <td><a href="/tasks/{{ task_.id }}/">{{ task_.id }}</a></td>
-                                                <td>{{task_.pub_date}}</td>
-                                            </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                                {% else %}
-                                <p>No tasks are available.</p>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [ basic-table ] end -->
-
-                    <!-- [ Hover-table ] start -->
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Hover Table</h5>
-                                <span class="d-block m-t-5">use class <code>table-hover</code> inside table
-                                    element</span>
+                                <h5>All tasks</h5>
                             </div>
                             <div class="card-block table-border-style">
                                 <div class="table-responsive">
@@ -108,47 +66,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- [ Hover-table ] end -->
-
-                    <!-- [ stiped-table ] start -->
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Striped Table</h5>
-                                <span class="d-block m-t-5">use class <code>table-striped</code> inside table
-                                    element</span>
-                            </div>
-                            <div class="card-block table-border-style">
-                                <div class="table-responsive">
-                                    {% if latest_task_list %}
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>UUID</th>
-                                                <th>link</th>
-                                                <th>date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for task_ in latest_task_list %}
-                                            <tr>
-                                                <th scope="row">{{task_.id}}</th>
-                                                <td>{{task_.uuid}}</td>
-                                                <td><a href="/tasks/{{ task_.id }}/">{{ task_.id }}</a></td>
-                                                <td>{{task_.pub_date}}</td>
-                                            </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    {% else %}
-                                    <p>No tasks are available.</p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [ stiped-table ] end -->
                 </div>
                 <!-- [ Main Content ] end -->
             </div>

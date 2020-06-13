@@ -41,9 +41,11 @@
                                     <form action="solver"  method="post" novalidate>
                                         {% csrf_token %}
                                         <div class="form-group">
-                                                <label for="classifier">Classifier</label>
-                                                <select id="classifier" class="mb-3 form-control">
-                                                        <option>Decision Trees</option>
+                                                <label for="classifier_id">Classifier</label>
+                                                <select id="classifier_id" name="classifier_id" class="mb-3 form-control">
+                                                    {% for classifier_ in classifiers %}
+                                                        <option value="{{ classifier_.id }}">{{ classifier_.title }}</option>
+                                                    {% endfor %}
                                                 </select>
                                                 <small id="classifierHelp" class="form-text text-muted">Select classifier to solve problem.</small>
                                         </div>

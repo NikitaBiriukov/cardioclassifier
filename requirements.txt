@@ -11,3 +11,5 @@ gunicorn
 whitenoise
 sklearn
 pydotplus
+matplotlib
+pandas
